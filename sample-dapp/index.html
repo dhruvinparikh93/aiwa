@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+    <link href="./styles.css" rel="stylesheet">
+</head>
+
+<body>
+        <h1 class='title'> AIWA Sample DApp </h1>
+
+    <div class="position">
+
+        <h3 class='header'>Read</h3>
+        <p class= "description">The get count function reads the current state of the counter in the contract. This is a get call.</p>
+
+        <button id="getCounter" type="button" class="button">Get Count</button>
+        <div id="counterResult" class='hash'>
+        </div>
+
+    </div>
+
+    <div class="position">
+        <h3 class='header'>Write</h3>
+        <p class= "description">The write functions change the state of the blockchain by incrementing or decrementing the counter in the contract.</p>
+        <button id="increment" type="button" class="button">Increment</button>
+        <div id="incremmentResult" class='hash'>
+        </div>
+    </div>
+
+
+    <div class="position">
+        <button id="decrement" type="button" class="button">Decrement</button>
+        <div id="decrementResult" class='hash'>
+        </div>
+        <div ></div>
+    </div>
+    <div class="position">
+        <h3 class='header'>Payable</h3>
+        <p class= "description">Sends Aion coins to the payable function in the contract.</p>
+        <button id="pay" type="button" class="button">Pay</button>
+        <div id="payResult" class='hash'>
+        </div>
+    </div>
+
+    <div class="position">
+        <h3 class='header'>Others</h3>
+        <p class= "description">Deploys a contract. Solidity code is already compiled to bytecode and it sends a transaction with no address and the compiled code to be executed.</p>
+        <button id="contract" type="button" class="button">Deploy Contract</button>
+        <div id="contractResult" class='hash'>
+        </div>
+    </div>
+
+    <div class="position">
+        <p class= "description">Signs a message with your private key. Can be used to prove a specific user verified an action.</p>
+        <button id="sign" type="button" class="button">Sign</button>
+        <div id="signResult" class='hash'>
+        </div>
+    </div>
+
+    <div class="position">
+        <p class= "description">Creates a raw transaction. This can be sent to a blockchain and as long as the nonce has not been incremented on the account the transaction will be valid.</p>
+        <button id="signTransaction" type="button" class="button">Sign Transaction</button>
+        <div id="signTxResult" class='hash'>
+        </div>
+    </div>
+    <div class="position">
+            <p class= "description">Sends TST token. You don't have this, so it will fail. However, look at the example code to see how this works.</p>
+            <button id="sendToken" type="button" class="button">Send Token</button>
+            <div id="sendTokenResult" class='hash'>
+            </div>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- <script>
+ if (typeof aionweb3 !== 'undefined') {
+    web3 = new Web3(aionweb3.currentProvider);
+} else {
+    // set the provider you want from Web3.providers
+    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+}
+</script> -->
+
+        <script src="./index.js"></script>
+        <a href="https://www.github.com" target="_blank">
+        <div class="position"
+            <p>View the code</p></a>
+        </div>
+</body>

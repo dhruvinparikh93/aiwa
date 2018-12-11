@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<h1>ONE DAPP TO RULE THEM ALL!!!!!</h1>
+<h2>metamask ropsten</h2>
+<body>
+    <div class="button">
+        <button id="getCounter" type="button" class="btn btn-primary">GetCount</button>   
+    </div>
+    <div class="button">
+            <button id="increment" type="button" class="btn btn-primary">Increment</button>   
+        </div>
+        <div class="button">
+                <button id="decrement" type="button" class="btn btn-primary">Decrememnt</button>   
+            </div>
+            
+                <div class="button">
+                    <button id="pay" type="button" class="btn btn-primary">pay</button>   
+                </div>
+
+                <div class="button">
+                    <button id="contract" type="button" class="btn btn-primary">contract</button>   
+                </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://rawgit.com/ethereum/web3.js/develop/dist/web3.min.js"></script>
+<!-- <script>
+ if (typeof web3 !== 'undefined') {
+    web3 = new Web3(web3.currentProvider);
+} else {
+    // set the provider you want from Web3.providers
+    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+}
+</script> -->
+
+ <script>
+
+
+    var simpleContract = web3.eth.contract(
+        [
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "pay",
+            "outputs": [],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "decrement",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "getCounter",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "increment",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        }
+    ]
+    )
+var simple = simpleContract.at('0xCddfEb6456F6ECdbb37f06AA64B614F5B22dB2D3')
+var amount = $( "amount" ).val();
+var nonce = web3.eth.getTransactionCount;
+var rawTx = {
+    nonce,
+    gasPrice: 10000000000, 
+    gas: 220000,  
+    data: '0x605060405234156100105760006000fd5b604051601080610201833981016040528080519060100190919050505b3360016000508282909180600101839055555050508060006000508190909055505b50610055565b61019d806100646000396000f30060506040526000356c01000000000000000000000000900463ffffffff1680631b9265b8146100545780635b34b9661461005e578063a87d942c14610074578063f5c5ad831461009e5761004e565b60006000fd5b61005c6100b4565b005b341561006a5760006000fd5b6100726100b7565b005b34156100805760006000fd5b61008861010b565b6040518082815260100191505060405180910390f35b34156100aa5760006000fd5b6100b261011d565b005b5b565b6001600060008282825054019250508190909055507f6816b015b746c8c8f573c271468a9bb4b1f0cb04ff12291673f7d2320a4901f76001604051808215151515815260100191505060405180910390a15b565b6000600060005054905061011a565b90565b6001600060008282825054039250508190909055507f09a2ae7b00cae5ecb77463403c1d5d6c03cf6db222a78e22cbcafbe0a1ac9eec6001604051808215151515815260100191505060405180910390a15b5600a165627a7a72305820b3dab74470811e4252fee5953b4a99410ba278e1370fe7299a1bbcea006eaee90029'
+   }
+$('#getCounter').on('click', function (e) {
+    simple.getCounter(function (err, result) {
+         if (err)
+           console.log(`error: ${err}`);
+         else
+           alert(result);
+      });
+ });
+ $('#increment').on('click', function (e) {
+    simple.increment(function (err, result) {
+         if (err)
+           console.log(`error: ${err}`);
+         else
+           alert(result);
+      });
+ });
+ $('#decrement').on('click', function (e) {
+    simple.decrement(function (err, result) {
+         if (err)
+           console.log(`error: ${err}`);
+         else
+           alert(result);
+      });
+ });
+ $('#pay').on('click', function (e) {
+    simple.pay( {from: web3.eth.accounts[0], gas: 3000000, value: (1 * 10**18)}, function (err, result) {
+        if (err)
+          console.log(`error: ${err}`);
+        else
+          alert(result);
+     });
+});
+
+$('#contract').on('click', function (e) {
+    web3.eth.sendTransaction( {from: web3.eth.accounts[0], gas: 3000000, gasPrice: 10000000000, data: "0x608060405234801561001057600080fd5b506040516020806101bb833981016040525160018054600160a060020a03191633179055600055610175806100466000396000f3006080604052600436106100615763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631b9265b881146100665780635b34b96614610070578063a87d942c14610085578063f5c5ad83146100ac575b600080fd5b61006e6100c1565b005b34801561007c57600080fd5b5061006e6100c3565b34801561009157600080fd5b5061009a610103565b60408051918252519081900360200190f35b3480156100b857600080fd5b5061006e610109565b565b60008054600190810190915560408051918252517f6816b015b746c8c8f573c271468a9bb4b1f0cb04ff12291673f7d2320a4901f79181900360200190a1565b60005490565b60008054600019019055604080516001815290517f09a2ae7b00cae5ecb77463403c1d5d6c03cf6db222a78e22cbcafbe0a1ac9eec9181900360200190a15600a165627a7a72305820ec5b1b03483fe253ffd9b48b52ecc18efda76f2d6cd6a02ced2043723e0b7cec0029"}, function (err, result) {
+        if (err)
+          console.log(`error: ${err}`);
+        else
+          alert(result);
+     });
+});
+
+
+
+</script>
+</body>
