@@ -1,6 +1,6 @@
-var simpleContract, simple, contractAddr;
 
 window.onload = () => {
+ // aiwa.enable(); you can put it here to pop up on load. Will be ignored if Privacy mode is not enabled.
     simpleContract = aionweb3.eth.contract(
         [
             {
@@ -439,55 +439,101 @@ window.onload = () => {
     token = tokenContract.at("0xa0c7ab5b2b68ac5c32b4e2d09ca57bf487b9c7948236f2e9edea4b48862cc922"); //gets token contract instance
 }
 
-
+$('#grantAccess').on('click', async () => {
+  try {
+    const accountAddress = await aiwa.enable();  // grants access. Best practice to do it in a button. 
+    document.getElementById("grantsAccess").innerHTML = 'account address: ' + accountAddress;
+  } catch(err){
+    document.getElementById("grantsAccess").innerHTML = err.message;
+} 
+}); 
 
 $('#getCounter').click(() => {
+    try {
     count = simple.getCount(); //instance then function name
     document.getElementById('counterResult').innerHTML=count;
+    } catch(err){
+      document.getElementById('counterResult').innerHTML=err;
+    }
 });
 
 
 
 $('#increment').on('click', async () => {
+    try {
+    // await aiwa.enable();  // if you want to put it in a funciton then logic make sure to await it. 
     const txHash = await simple.incrementCounter(); //async function, instance then function name
     document.getElementById('incremmentResult').innerHTML=txHash
+    } catch (err) {
+      document.getElementById('incremmentResult').innerHTML=err;
+
+    }
 });
 
 
 
 $('#decrement').on('click', async () => {
+    try {
     const txHash = await simple.decrementCounter(); //async function, instance then function name
     document.getElementById('decrementResult').innerHTML=txHash
+    } catch(err) {
+      document.getElementById('decrementResult').innerHTML=err;
+    }
 });
 
 
 $('#pay').on('click', async () => {
+    try {
     const txHash = await simple.pay({ value: (1 * 10 ** 16) }); //instance, function name then params (value)
     document.getElementById('payResult').innerHTML=txHash
+    } catch(err) {
+     document.getElementById('payResult').innerHTML=err;
+
+    }
 });
 
 
 $('#contract').on('click', async () => {
-    const code = "0x605060405234156100105760006000fd5b604051601080610201833981016040528080519060100190919050505b3360016000508282909180600101839055555050508060006000508190909055505b50610055565b61019d806100646000396000f30060506040526000356c01000000000000000000000000900463ffffffff1680631b9265b8146100545780635b34b9661461005e578063a87d942c14610074578063f5c5ad831461009e5761004e565b60006000fd5b61005c6100b4565b005b341561006a5760006000fd5b6100726100b7565b005b34156100805760006000fd5b61008861010b565b6040518082815260100191505060405180910390f35b34156100aa5760006000fd5b6100b261011d565b005b5b565b6001600060008282825054019250508190909055507f6816b015b746c8c8f573c271468a9bb4b1f0cb04ff12291673f7d2320a4901f76001604051808215151515815260100191505060405180910390a15b565b6000600060005054905061011a565b90565b6001600060008282825054039250508190909055507f09a2ae7b00cae5ecb77463403c1d5d6c03cf6db222a78e22cbcafbe0a1ac9eec6001604051808215151515815260100191505060405180910390a15b5600a165627a7a72305820b3dab74470811e4252fee5953b4a99410ba278e1370fe7299a1bbcea006eaee90029"
+  try {  
+  const code = "0x605060405234156100105760006000fd5b604051601080610201833981016040528080519060100190919050505b3360016000508282909180600101839055555050508060006000508190909055505b50610055565b61019d806100646000396000f30060506040526000356c01000000000000000000000000900463ffffffff1680631b9265b8146100545780635b34b9661461005e578063a87d942c14610074578063f5c5ad831461009e5761004e565b60006000fd5b61005c6100b4565b005b341561006a5760006000fd5b6100726100b7565b005b34156100805760006000fd5b61008861010b565b6040518082815260100191505060405180910390f35b34156100aa5760006000fd5b6100b261011d565b005b5b565b6001600060008282825054019250508190909055507f6816b015b746c8c8f573c271468a9bb4b1f0cb04ff12291673f7d2320a4901f76001604051808215151515815260100191505060405180910390a15b565b6000600060005054905061011a565b90565b6001600060008282825054039250508190909055507f09a2ae7b00cae5ecb77463403c1d5d6c03cf6db222a78e22cbcafbe0a1ac9eec6001604051808215151515815260100191505060405180910390a15b5600a165627a7a72305820b3dab74470811e4252fee5953b4a99410ba278e1370fe7299a1bbcea006eaee90029"
     //compiled byte code 
-    const tx = { data: code, gas: 51000 }; // bundling it into a transaction object
+    const tx = { data: code, gas: 510000 }; // bundling it into a transaction object
     const txHash = await aionweb3.eth.sendTransaction(tx); //sending object
     document.getElementById('contractResult').innerHTML=txHash;
+  }catch (err) {
+    document.getElementById('contractResult').innerHTML=err;
+
+  }
 });
 
 $('#sign').on('click', async () => {
+    try {
     const signedMsg = await aionweb3.eth.sign(aionweb3.eth.accounts[0], "0x123456"); 
     document.getElementById('signResult').innerHTML="signed message " + signedMsg.signature;
+    } catch (err) {
+      document.getElementById('signResult').innerHTML=err;
+
+    }
 });
 
 $('#signTransaction').on('click', async () => {
+    try {
     const tx = { to: '0xa020f60b3f4aba97b0027ca81c5d20c9898d7c43a50359d209596b86e8ce3ca2', gas: 21000, value: 0, data: "0x123456" };
     const signedTx = await aionweb3.eth.signTransaction(tx)
     document.getElementById('signTxResult').innerHTML="Raw Transaction " + signedTx.rawTransaction
+    } catch (err) {
+      document.getElementById('signTxResult').innerHTML=err;
+
+    }
 });
 
 
 $('#sendToken').on('click', async () => {
+  try {
     const txHash = await token.transfer('0xa0f717ba35f5c539c73e144dbe2cb0a1bf951a93b3dc933ccde97b0100770487', 100); //gets token contract instance, calls transfer method with params.
     document.getElementById('sendTokenResult').innerHTML=txHash
+  } catch (err) {
+    document.getElementById('sendTokenResult').innerHTML=err
+
+  }
 });
