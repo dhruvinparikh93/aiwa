@@ -2,9 +2,10 @@ Before filing a new issue, please provide the following information.
 
 ## Basic Details ##
 #### AIWA version ####
-
+0.x
 
 #### Installed from Chrome Web Store or Github release? ####
+web store/Github
 
 ## Problem Description ##
 #### Expected vs Actual Behaviour ####
