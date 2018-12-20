@@ -7,6 +7,9 @@ Before filing a new issue, please provide the following information.
 #### Installed from Chrome Web Store or Github release? ####
 web store/Github
 
+#### Which provider are you using? ####
+Mainnet/Mastery/Custom (provide details)/Tested with multiple/Irrelevant to problem
+
 ## Problem Description ##
 #### Expected vs Actual Behaviour ####
 
