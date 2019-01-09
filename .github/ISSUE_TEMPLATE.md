@@ -7,6 +7,11 @@ Before filing a new issue, please provide the following information.
 #### Installed from Chrome Web Store or Github release?
 web store/Github
 
+#### Chrome version?
+
+#### OS and version?
+MacOS 10.x.x/Windows 10.x/Ubuntu 18.x/etc
+
 #### Which provider are you using?
 Mainnet/Mastery/Custom (provide details)/Tested with multiple/Irrelevant to problem
 
