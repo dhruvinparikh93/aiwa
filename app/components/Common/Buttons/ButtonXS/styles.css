@@ -1,0 +1,27 @@
+.button-xs-primary {
+  background-color: #ffffff;
+  width: 97.58px;
+  height: 34px;
+  border-radius: 15px;
+  border: 1px #e2e2e2;
+  color: #000000;
+  font-size: 14px;
+  border-style: solid;
+  font-family: 'Roboto-Medium';
+}
+
+.button-xs-secondary {
+  background-color: #33c7a5;
+  width: 97.58px;
+  height: 34px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 14px;
+  border-style: solid;
+  border: 0px transparent;
+  font-family: 'Roboto-Medium';
+}
+
+.button-xs-secondary:active {
+  background-color: #009576;
+ }

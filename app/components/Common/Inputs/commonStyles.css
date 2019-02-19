@@ -1,0 +1,57 @@
+.aiwa-input {
+  width: 260.34px;
+  height: 48.3px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d5d5d5;
+  color: #000000;
+  background-color: white;
+  /* opacity: 0.4; */
+  font-family: 'Roboto-Italic';
+  font-size: 14px;
+  padding: 16px;
+  transition: border-color 200ms ease-in-out;
+}
+
+.aiwa-input-error {
+  border-color: #ff0000;
+}
+
+.aiwa-input-readonly {
+  opacity: 0.5;
+}
+.aiwa-input-error::placeholder {
+  color: #ff0000;
+  text-align: left;
+}
+.aiwa-input::placeholder {
+  text-align: left !important;
+}
+
+.aiwa-input-area {
+  width: 316.34px;
+  height: 100.3px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d5d5d5;
+  color: #000000;
+  background-color: white;
+  /* opacity: 0.4; */
+  font-family: 'Roboto-Italic';
+  font-size: 14px;
+  padding: 16px;
+  transition: border-color 200ms ease-in-out;
+}
+
+.aiwa-input-area-error {
+  border-color: #ff0000;
+}
+.aiwa-input-area-error::placeholder {
+  color: #ff0000;
+  text-align: left;
+}
+.aiwa-input-area::placeholder {
+  text-align: left !important;
+}

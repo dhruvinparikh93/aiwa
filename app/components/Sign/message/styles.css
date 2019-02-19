@@ -1,0 +1,179 @@
+.sign-data-container-popup {
+  background: #ebebeb;
+  height: calc(100vh - 65px - 45px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sign-data-container-window {
+  background: #ebebeb;
+  height: 546px;
+}
+
+.sign-data-dapp {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "favIcon url";
+  height: 44px;
+  margin-left: 10px;
+}
+
+.sign-data-dapp-favIcon {
+  grid-area: favIcon;
+  justify-self: center;
+  align-self: center;
+}
+
+.sign-data-dapp-url {
+  grid-area: url;
+  font-size: 13px;
+  color: #000000;
+  font-family: "Roboto-Regular";
+  align-self: center;
+}
+
+.sign-data-request-text {
+  height: 74px;
+  font-size: 24px;
+  font-family: "Roboto-Regular";
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 24px;
+}
+
+.sign-data-account-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "text balance"
+    "alias token-balance"
+    "address token-balance-usd";
+  height: 66px;
+  width: 304px;
+  margin-top: 16px;
+  margin-left: 27px;
+  margin-right: 26px;
+}
+
+.sign-data-account-text {
+  grid-area: text;
+  font-size: 14px;
+  font-family: "Roboto-Regular";
+  color: #acacac;
+}
+
+.sign-data-account-balance {
+  grid-area: balance;
+  font-size: 14px;
+  font-family: "Roboto-Regular";
+  color: #acacac;
+  text-align: right;
+}
+
+.sign-data-account-alias {
+  grid-area: alias;
+  font-family: "Roboto-Medium";
+  font-size: 18px;
+  color: #000000;
+}
+
+.sign-data-account-token-balance {
+  grid-area: token-balance;
+  font-family: "Roboto-Medium";
+  font-size: 18px;
+  color: #000000;
+  text-align: right;
+}
+
+.sign-data-account-address {
+  grid-area: address;
+  font-family: "Roboto-Light";
+  font-size: 15px;
+  color: #000000;
+}
+
+.sign-data-account-token-balance-usd {
+  grid-area: token-balance-usd;
+  font-family: "Roboto-Light";
+  font-size: 15px;
+  color: #000000;
+  text-align: right;
+}
+
+.sign-data-disclaimer-container {
+  height: 97px;
+  width: 315px;
+  background-color: #343434;
+  border-radius: 20px;
+  margin-left: 21px;
+  margin-right: 21px;
+  margin-top: 20px;
+}
+
+.sign-data-disclaimer-notice-container {
+  display: grid;
+  grid-template-columns: 0.5fr, 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "icon text";
+  padding-top: 13px;
+  padding-right: 13.79px;
+  padding-left: 17px;
+}
+
+.sign-data-disclaimer-notice-icon {
+  grid-area: icon;
+  font-size: 22px;
+  justify-content: center;
+  align-self: center;
+  color: #ebebeb;
+}
+
+.sign-data-disclaimer-notice-text {
+  grid-area: text;
+  font-size: 12px;
+  padding-left: 12px;
+  justify-content: center;
+  color: #ebebeb;
+  font-family: "Roboto-Regular";
+}
+
+.sign-data-message-header {
+  color: #000000;
+  opacity: 0.4;
+  font-family: "Roboto-Regular";
+  margin-left: 21px;
+  margin-top: 20px;
+}
+
+.sign-data-message-container {
+  font-family: "Roboto-Regular";
+  font-size: 13px;
+  color: #000000;
+  margin-left: 21px;
+  margin-top: 10px;
+  margin-right: 23px;
+  width: 311px;
+  height: 82px;
+  overflow: auto;
+}
+
+.sign-data-button-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "cancel sign";
+  margin-left: 22px;
+  margin-right: 15.84px;
+  margin-top: 40px;
+  margin-bottom: 34.37px;
+}
+
+.sign-data-button-cancel {
+  grid-area: cancel;
+}
+
+.sign-data-button-sign {
+  grid-area: sign;
+}

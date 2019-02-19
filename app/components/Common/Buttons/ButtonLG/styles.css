@@ -1,0 +1,27 @@
+.button-lg-primary {
+  background-color: #ffffff;
+  width: 260px;
+  height: 35.63px;
+  border-radius: 15px;
+  border: 1px #707070;
+  color: #000000;
+  font-size: 16px;
+  border-style: solid;
+  font-family: 'Roboto-Regular';
+}
+
+.button-lg-secondary {
+  background-color: #33c7a5;
+  width: 260px;
+  height: 35.63px;
+  border-radius: 15px;
+  border: 0px transparent;
+  color: #fff;
+  font-size: 16px;
+  border-style: solid;
+  font-family: 'Roboto-Regular';
+}
+
+.button-lg-secondary:active {
+  background-color: #1f7964;
+}

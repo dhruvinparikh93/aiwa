@@ -1,0 +1,56 @@
+.settings-privacy-mode {
+  grid-area: privacy-mode;
+  display: grid;
+  grid-template-areas:
+    "privacy-mode-label"
+    "privacy-mode-content";
+
+  padding-left: 20px;
+  padding-top: 12px;
+}
+.settings-privacy-mode-label {
+  grid-area: privacy-mode-label;
+  margin-bottom: 12px;
+}
+
+.settings-privacy-mode-content {
+  grid-area: privacy-mode-content;
+  display: grid;
+  grid-template-areas:
+    "privacy-mode-info"
+    "export-padding";
+  grid-template-columns: fit-content(100%);
+  grid-template-rows: auto 20px;
+  padding-left: 27px;
+  padding-right: 10px;
+}
+
+.settings-privacy-mode-info {
+  grid-area: privacy-mode-info;
+  align-self: flex-end;
+  justify-self: center;
+}
+.settings-privacy-mode-info-text {
+  color: #719db1;
+  transition: color 200ms ease-in-out;
+}
+
+.settings-privacy-mode-info-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  display: inline;
+}
+
+.settings-privacy-mode-toggle {
+  display: inline-grid;
+  grid-template-areas: "privacy-mode-toggle-switch";
+  margin-left: 130px;
+}
+
+.setting-privacy-mode-toggle-switch {
+  grid-area: privacy-mode-toggle-switch;
+}
+
+.settings-export-padding {
+  grid-area: export-padding;
+}

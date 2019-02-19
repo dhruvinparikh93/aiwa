@@ -1,0 +1,76 @@
+.account-settings-export-private-key {
+  /* grid-area: export-private-key; */
+  display: grid;
+  grid-template-areas:
+    'export-private-key-label'
+    'export-private-key-content';
+  padding-left: 20px;
+  padding-top: 12px;
+}
+.account-settings-export-private-key-label {
+  grid-area: export-private-key-label;
+  margin-bottom: 12px;
+}
+
+.account-settings-export-private-key-content {
+  grid-area: export-private-key-content;
+  display: grid;
+  grid-template-areas:
+    'export-private-key-input export-private-key-button'
+    'export-padding export-padding';
+  grid-template-columns: fit-content(100%);
+  grid-template-rows: auto 20px;
+  padding-left: 27px;
+}
+
+.account-settings-export-private-key-input {
+  grid-area: export-private-key-input;
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.account-settings-export-private-key-reveal {
+  grid-area: export-private-key-input;
+  display: grid;
+  grid-template-areas: 'phrase copy-icon';
+}
+
+.account-settings-export-private-key-button {
+  grid-area: export-private-key-button;
+  align-self: flex-end;
+  justify-self: right;
+  margin-right: 20px;
+}
+
+.account-settings-export-padding {
+  grid-area: export-padding;
+}
+
+.account-settings-export-private-key-copy-icon {
+  grid-area: copy-icon;
+  color: #8fc1d8;
+  opacity: 0.5;
+  justify-self: center;
+  align-self: center;
+  transition: color 200ms ease-in-out;
+}
+
+.account-settings-export-private-key-copy-icon-highlighted {
+  grid-area: copy-icon;
+  justify-self: center;
+  align-self: center;
+}
+
+.account-settings-export-private-key-phrase {
+  grid-area: phrase;
+  color: #719db1;
+  transition: color 200ms ease-in-out;
+  overflow-wrap: break-word;
+  width: 250px;
+}
+.account-settings-export-private-key-phrase-highlighted {
+  grid-area: phrase;
+  color: #8fc1d8;
+  overflow-wrap: break-word;
+  width: 250px;
+}

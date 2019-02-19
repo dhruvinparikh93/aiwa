@@ -1,0 +1,38 @@
+.account-settings-grid-container {
+  display: grid;
+  grid-template-areas:
+    'import-wallet'
+    'import-wallet-divider';
+  background-color: #005074;
+}
+
+.account-settings-import-wallet {
+  grid-area: import-wallet;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.account-settings-import-wallet-divider {
+  grid-area: import-wallet-divider;
+  color: #ffffff;
+  opacity: 0.2;
+  height: 1px;
+}
+
+.account-settings-title {
+  font-size: 15px;
+  line-height: 1;
+  color: #ffffff;
+  display: inline;
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+.account-settings-icon {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.account-settings-import-wallet-highlighted {
+  background-color: #3d6d8e;
+}

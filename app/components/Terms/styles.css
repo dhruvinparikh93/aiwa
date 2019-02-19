@@ -1,0 +1,67 @@
+.tou-main::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+.tou-main::-webkit-scrollbar-track {
+  background: transparent !important ; 
+}
+
+.tou-main::-webkit-scrollbar-thumb {
+  background: #b2b2b2 !important ;
+  border-radius: 25px !important ;
+}
+
+.tou-main::-webkit-scrollbar-thumb:hover {
+  background: #555 !important ;
+  border-radius: 25px !important ;
+}
+.tou-title {
+  font-size: 19px;
+  font-family: 'Roboto-Medium';
+  color: #000000;
+  text-align: center;
+  opacity: 100;
+  padding-top: 20px;
+  line-height: 1.21;
+  margin-bottom: 0px;
+}
+.tou-text {
+  margin-right: 10px;
+}
+
+.tou-center {
+  align-items: center;
+}
+.tou-subtitle {
+  text-align: center;
+  font-family: 'Roboto-Regular';
+  font-size: 13px;
+  line-height: 1.15;
+}
+.tou-main {
+  grid-area: main;
+  padding: 0 20px;
+  height: 385px;
+  overflow: hidden;
+  overflow-y: scroll;
+  text-align: justify;
+}
+
+.tou-header {
+  grid-area: header;
+  height: 70px;
+  background-color: #ffffff;
+  padding: 0px 14px;
+}
+.tou-footer {
+  grid-area: footer;
+}
+.tou-grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+
+  background-color: #ffffff;
+}

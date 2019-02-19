@@ -1,0 +1,27 @@
+.add-token-suggestion-button-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "button-cancel button-send";
+  width: 260px;
+}
+
+.add-token-suggestion-button-cancel {
+  grid-area: button-cancel;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.add-token-suggestion-button-send {
+  grid-area: button-send;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+.close-window-icon {
+  text-align: right;
+}
+
+.close-window-icon:hover {
+  cursor: pointer;
+}

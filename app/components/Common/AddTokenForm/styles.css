@@ -1,0 +1,56 @@
+.add-token-form-container {
+    display: grid;
+    grid-template-areas:
+      'title title'
+      'address address'
+      'name name'
+      'symbol decimals'
+      '. .'
+      'button button';
+    grid-template-rows: 0.1fr 0.6fr 0.6fr 0.6fr 0.2fr 0.5fr;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 25px;
+    /* padding-top: 50px; */
+    background-color: #ebebeb;
+    height: calc(100vh - 55px - 55px);
+  }
+  
+  .add-token-form-title {
+    grid-area: title;
+    justify-items: center;
+    align-self: center;
+    text-align:center;
+    height: 45px;
+  }
+  
+  .add-token-form-contract-address {
+    grid-area: address;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .add-token-form-name {
+    grid-area: name;
+    justify-self: center;
+    align-self: center;
+  }
+  .add-token-form-symbol {
+    grid-area: symbol;
+    justify-self: center;
+    align-self: center;
+  }
+  .add-token-form-decimals {
+    grid-area: decimals;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .add-token-form-button {
+    grid-area: button;
+    justify-self: center;
+    align-self: flex-end;
+    padding-bottom: 26px;
+  }
+  

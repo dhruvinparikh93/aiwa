@@ -1,0 +1,7 @@
+.aiwa-button-disabled {
+  opacity: 0.5;
+}
+
+.aiwa-button-color-transition {
+  transition: all 250ms ease-in-out;
+}

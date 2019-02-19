@@ -1,0 +1,23 @@
+.aiwa-multiline-input {
+  width: 260.34px;
+  height: 48.3px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d5d5d5;
+  color: #000000;
+  opacity: 0.4;
+  font-family: 'Roboto-Italic';
+  font-size: 18px;
+  padding: 24px;
+  transition: border-color 200ms ease-in-out;
+}
+
+.-multiline-error {
+  border-color: #ff0000;
+  opacity: 0.6;
+}
+.-multiline-error::placeholder {
+  color: #ff0000;
+  opacity: 0.6;
+}

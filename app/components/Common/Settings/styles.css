@@ -1,0 +1,92 @@
+.settings-grid-container {
+  display: grid;
+  grid-template-areas:
+    'import-vault'
+    'import-vault-divider'
+    'export-vault'
+    'export-vault-divider'
+    'export-seed-words'
+    'export-seed-words-divider'
+    'session-timeout'
+    'session-timeout-divider'
+    'privacy-mode';
+  background-color: #004260;
+}
+
+.settings-import-vault {
+  grid-area: import-vault;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.settings-import-vault-divider {
+  grid-area: import-vault-divider;
+  color: #ffffff;
+  opacity: 0.2;
+  height: 1px;
+}
+
+.settings-export-vault {
+  grid-area: export-vault;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.settings-export-vault-divider {
+  grid-area: export-vault-divider;
+  color: #ffffff;
+  opacity: 0.2;
+  height: 1px;
+}
+
+.settings-export-seed-words {
+  grid-area: export-seed-words;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.settings-export-seed-words-divider {
+  grid-area: export-seed-words-divider;
+  color: #ffffff;
+  opacity: 0.2;
+  height: 1px;
+}
+
+.settings-session-timeout {
+  grid-area: session-timeout;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.settings-session-timeout-divider {
+  grid-area: session-timeout-divider;
+  color: #ffffff;
+  opacity: 0.2;
+  height: 1px;
+}
+
+.settings-privacy-mode {
+  grid-area: privacy-mode;
+  transition: background-color 200ms ease-in-out;
+}
+
+.settings-title {
+  font-size: 15px;
+  line-height: 1;
+  color: #ffffff;
+  display: inline;
+  padding-left: 12px;
+}
+
+.settings-icon {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.settings-session-timeout-highlighted,
+.settings-import-vault-highlighted,
+.settings-export-vault-highlighted,
+.settings-export-seed-words-highlighted,
+.settings-privacy-mode-highlighted {
+  background-color: #3d6d8e;
+}

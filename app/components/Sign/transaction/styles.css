@@ -1,0 +1,15 @@
+.sign-transaction-button-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "cancel send";
+  width: 357px;
+}
+
+.sign-transaction-button-cancel {
+  grid-area: cancel;
+}
+
+.sign-transaction-button-send {
+  grid-area: send;
+}

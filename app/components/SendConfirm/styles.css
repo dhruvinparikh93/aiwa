@@ -1,0 +1,15 @@
+.send-confirm-button-container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "cancel send";
+  width: 357px;
+}
+
+.send-confirm-button-cancel {
+  grid-area: cancel;
+}
+
+.send-confirm-button-send {
+  grid-area: send;
+}

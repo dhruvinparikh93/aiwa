@@ -1,0 +1,42 @@
+.settings-export-vault {
+  grid-area: export-vault;
+  display: grid;
+  grid-template-areas:
+    'export-vault-label'
+    'export-vault-content';
+
+  padding-left: 20px;
+  padding-top: 12px;
+}
+.settings-export-vault-label {
+  grid-area: export-vault-label;
+  margin-bottom: 12px;
+}
+
+.settings-export-vault-content {
+  grid-area: export-vault-content;
+  display: grid;
+  grid-template-areas:
+    'export-vault-input export-vault-button'
+    'export-padding export-padding';
+  grid-template-columns: fit-content(100%);
+  grid-template-rows: auto 20px;
+  padding-left: 27px;
+}
+
+.settings-export-vault-input {
+  grid-area: export-vault-input;
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.settings-export-vault-button {
+  grid-area: export-vault-button;
+  align-self: flex-end;
+  justify-self: right;
+  margin-right: 20px;
+}
+
+.settings-export-padding {
+  grid-area: export-padding;
+}

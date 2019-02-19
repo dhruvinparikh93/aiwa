@@ -1,0 +1,132 @@
+.token-details-grid-containers {
+  background-color: #551f52;
+  display: grid;
+  grid-template-areas:
+    'token-name           token-balance'
+    'deposit-button       send-button'
+    'token-market-details token-market-details';
+  grid-template-rows: 70px 60px auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.token-details-grid-token-name {
+  grid-area: token-name;
+  justify-self: flex-start;
+  align-self: center;
+  margin-left: 20px;
+}
+.token-details-grid-token-balance {
+  grid-area: token-balance;
+  display: grid;
+  grid-template-areas:
+    'token-balance-amount arrow-icon'
+    'token-balance-usd arrow-icon';
+  justify-self: flex-start;
+  padding-left: 15px;
+  grid-template-rows: fit-content(100%);
+  align-self: center;
+
+  width: calc(100vw / 2);
+}
+
+.token-balance-grid-amount {
+  grid-area: token-balance-amount;
+  font-family: 'Roboto-Regular';
+  font-size: 25px;
+  color: #ffffff;
+}
+.token-balance-grid-usd {
+  grid-area: token-balance-usd;
+  font-family: 'Roboto-Light';
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.token-details-grid-arrow-icon {
+  grid-area: arrow-icon;
+  justify-self: flex-end;
+  align-self: center;
+  cursor: pointer;
+  padding-right: 20px;
+}
+.token-details-grid-send-button {
+  grid-area: send-button;
+  justify-self: center;
+  align-self: center;
+}
+.token-details-grid-deposit-button {
+  grid-area: deposit-button;
+  justify-self: center;
+  align-self: center;
+}
+
+.token-details-token-name-balance-token-usd {
+  grid-area: token-usd;
+}
+
+.token-details-token-name-balance-in-your-wallet {
+  grid-area: in-your-wallet;
+  font-family: 'Roboto-Light';
+  font-size: 10px;
+  opacity: 0.7;
+  justify-self: flex-start;
+  align-self: flex-end;
+  color: #ffffff;
+}
+
+.token-details-market-data-error {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.token-details-grid-token-market-details {
+  grid-area: token-market-details;
+  align-items: flex-end;
+  text-align: center;
+  height: 223px;
+}
+
+.token-details-market-data-grid-containers {
+  display: grid;
+  grid-template:
+    'market-cap current-price'
+    'price-movement volume '
+    'circulating-supply max-supply';
+  grid-auto-columns: 1fr;
+  height: 178px;
+  margin: 25px 33px 21px 33px;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.token-details-market-data-market-cap {
+  grid-area: market-cap;
+}
+
+.token-details-market-data-current-price {
+  grid-area: current-price;
+}
+
+.token-details-market-data-price-movement {
+  grid-area: price-movement;
+}
+
+.token-details-market-data-volume {
+  grid-area: volume;
+}
+
+.token-details-market-data-circulating-supply {
+  grid-area: circulating-supply;
+}
+
+.token-details-market-data-max-supply {
+  grid-area: max-supply;
+}
+
+.token-details-market-data-button {
+  height: 36px;
+  text-align: center;
+  background-color: #774c75;
+  padding-top: 10px;
+}

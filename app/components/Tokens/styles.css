@@ -1,0 +1,80 @@
+.token-container {
+  margin-top: 31px;
+  display: grid;
+  grid-template-areas:
+    'token-list-content'
+    'token-list-add-token-button';
+}
+
+.token-container-content {
+  grid-area: token-list-content;
+  height: calc(100vh - 83px - 55px - 69px - 29px);
+}
+
+.token-container-add-token-button {
+  grid-area: token-list-add-token-button;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 29px;
+}
+
+.token-item-container {
+  display: grid;
+  grid-template-columns: 0.35fr 2fr 0.45fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'token-icon token-name token-selected-icon'
+    'token-icon token-balance token-selected-icon';
+  cursor: pointer;
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 45px;
+  width: 278px;
+}
+
+.token-item-token-icon-container {
+  grid-area: token-icon;
+  justify-self: center;
+  align-self: center;
+}
+
+.token-item-token-icon {
+  height: 28px !important;
+  width: 28px !important;
+  border-radius: 50%;
+}
+
+.token-item-token-icon-selected {
+  border: 1px solid white;
+}
+
+.token-item-token-name {
+  grid-area: token-name;
+  color: #ffffff;
+  padding-left: 14px;
+  align-self: center;
+}
+
+.token-item-token-selected-icon {
+  grid-area: token-selected-icon;
+  justify-self: flex-end;
+  align-self: center;
+  color: #ffffff;
+  font-size: 20px;
+
+  display: grid;
+  grid-template-areas: 'icon-1 icon-2';
+}
+
+.token-item-token-balance {
+  grid-area: token-balance;
+  color: #ffffff;
+  padding-left: 14px;
+}
+
+.token-item-token-avatar {
+  height: 38px;
+  width: 38px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}

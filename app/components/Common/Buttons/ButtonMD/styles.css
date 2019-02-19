@@ -1,0 +1,31 @@
+.button-md-primary {
+  background-color: #ffffff;
+  width: 153.58px;
+  height: 35.63px;
+  border-radius: 15px;
+  border: 1px #707070;
+  color: #000000;
+  font-size: 16px;
+  border-style: solid;
+  font-family: "Roboto-Regular";
+}
+
+.button-md-secondary {
+  background-color: #33c7a5;
+  width: 153.58px;
+  height: 35.63px;
+  border-radius: 15px;
+  border: 0px transparent;
+  color: #fff;
+  font-size: 16px;
+  border-style: solid;
+  font-family: "Roboto-Regular";
+}
+
+.button-md-secondary:active {
+  background-color: #009576;
+}
+
+.button-md-primary:active {
+  background-color: #f6f6f6;
+}

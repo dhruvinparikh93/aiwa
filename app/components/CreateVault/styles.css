@@ -1,0 +1,99 @@
+.create-vault-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 0.6fr 1fr 1fr 0.6fr 0.6fr 0.8fr;
+  grid-template-areas:
+    'title'
+    'password'
+    'confirm-password'
+    'password-meter'
+    'seed'
+    'submit-button';
+  grid-gap: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  height: calc(100vh - 180px - 69px);
+}
+
+.create-vault-title {
+  grid-area: title;
+  font-family: 'Roboto-Regular';
+  color: #000000;
+  font-size: 17px;
+  justify-self: center;
+  align-self: center;
+}
+.create-vault-password {
+  grid-area: password;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.create-vault-confirm-password {
+  grid-area: confirm-password;
+  justify-self: center;
+  align-self: flex-start;
+}
+.create-vault-password-meter {
+  grid-area: password-meter;
+  justify-self: center;
+  align-self: flex-start;
+}
+.create-vault-seed {
+  grid-area: seed;
+  font-family: 'Roboto-Light';
+  color: #000000;
+  font-size: 17px;
+  justify-self: center;
+  align-self: center;
+}
+.create-vault-submit-button {
+  grid-area: submit-button;
+  justify-self: center;
+  align-self: center;
+}
+
+.create-vault-footer-content {
+  text-align: center;
+}
+
+.create-vault-footer-content > p {
+  margin: 0;
+  font-family: 'Roboto-Medium';
+  font-size: 15px;
+}
+
+.meter-caption {
+  font-family: 'Roboto-Light';
+  font-size: 11px;
+  opacity: 0.6;
+  padding-top: 5.66px;
+}
+
+meter {
+  width: 256px;
+  height: 3.87px;
+  background: #d8d8d8;
+}
+meter.no-appearance {
+  -webkit-appearance: none;
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+}
+
+meter[value='1']::-webkit-meter-optimum-value {
+  background: #ff3d00;
+}
+meter[value='2']::-webkit-meter-optimum-value {
+  background: #ffa000;
+}
+meter[value='3']::-webkit-meter-optimum-value {
+  background: #afb42b;
+}
+meter[value='4']::-webkit-meter-optimum-value {
+  background: #00c853;
+}

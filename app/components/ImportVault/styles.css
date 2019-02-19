@@ -1,0 +1,62 @@
+.settings-import-vault {
+  align-self: center;
+
+  display: grid;
+  grid-template-areas:
+    'import-vault-label'
+    'import-vault-content';
+  padding-left: 20px;
+  cursor: pointer;
+  padding-top: 12px;
+}
+
+.settings-import-vault-label {
+  grid-area: import-vault-label;
+  margin-bottom: 12px;
+}
+
+.settings-import-vault-content {
+  grid-area: import-vault-content;
+  display: grid;
+  grid-template-areas:
+    'import-vault-file-name import-vault-file-name'
+    'import-vault-input import-vault-button'
+    'import-padding import-padding';
+  grid-template-columns: fit-content(100%);
+  grid-template-rows: auto auto 20px;
+  padding-left: 27px;
+  margin-top: -4px;
+}
+
+.settings-import-vault-file-name {
+  grid-area: import-vault-file-name;
+  justify-self: left;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.settings-import-vault-file-name-long-text {
+  font-size: 8px;
+}
+.settings-import-vault-file-name-text {
+  font-size: 10px;
+  color: #719db1;
+  margin-right: 20px;
+}
+
+.settings-import-vault-input {
+  grid-area: import-vault-input;
+  align-self: flex-end;
+  justify-content: center;
+}
+
+.settings-import-vault-button {
+  grid-area: import-vault-button;
+  justify-self: right;
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+.settings-import-padding {
+  grid-area: import-padding;
+}

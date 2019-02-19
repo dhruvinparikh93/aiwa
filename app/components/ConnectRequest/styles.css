@@ -1,0 +1,143 @@
+.connect-request-grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'main main'
+    'btn-cancel btn-connect';
+  background-color: #ffffff;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1.2fr 0.5fr;
+  width: 360px;
+  min-width: 360px;
+  max-width: 360px;
+  background-color: #ebebeb;
+  height: calc(100vh - 55px);
+ 
+}
+
+
+.connect-request-header {
+  grid-area: header;
+  height: 55px;
+  background-color: #ffffff;
+  padding: 0px 14px;
+}
+.connect-request-main {
+  grid-area: main;
+  overflow: hidden;
+  overflow-y: scroll;
+  text-align: justify;
+  
+}
+.connect-request-button-cancel {
+  grid-area: btn-cancel;
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 26px;
+}
+
+.connect-request-button-connect {
+  grid-area: btn-connect;
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 26px;
+}
+.connect-request-container {
+  background: #ebebeb;
+  text-align: center;
+}
+
+.connect-request-title {
+  font-size: 19px;
+  font-family: 'Roboto-Medium';
+  color: #000000;
+  text-align: center;
+  opacity: 100;
+  padding-top: 20px;
+  line-height: 1.21;
+  margin-bottom: 0px;
+}
+
+
+
+.connect-request-account-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 0.5fr);
+  grid-template-areas:
+    "dapp-favicon success-icon address"
+    "dapp-url . alias"
+    "info info info";
+  margin-top: 16px;
+  margin-left: 26px;
+  margin-right: 26px;
+ }
+ .connect-request-account-lines {
+  border: 1px dashed #bbb;
+  width: 203px;
+  margin-left: 77px;
+  position: relative;
+  }
+.connect-request-account-dapp-favicon {
+  grid-area: dapp-favicon;
+  justify-self: center;
+  align-self: center;
+}
+
+.connect-request-account-connect {
+  display: grid;
+  grid-area: success-icon;
+  height: 50px;
+  width: 50px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "icon";
+}
+
+.connect-request-account-connect-icon {
+  grid-area: icon;
+  justify-self: center;
+  align-self: center;
+}
+
+.connect-request-account-address {
+  display: grid;
+  grid-area: address;
+  justify-self: center;
+  align-self: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "addr-icon";
+}
+
+.connect-request-account-addr-icon {
+  grid-area: addr-icon;
+  height: 64px !important;
+  width: 64px !important;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.connect-request-account-alias {
+  grid-area: alias;
+  justify-self: center;
+  align-self: center;
+}
+
+.connect-request-account-dapp-url {
+  grid-area: dapp-url;
+  justify-self: center;
+  align-self: center;
+}
+.connect-request-prompt-info {
+  grid-area: info;
+  justify-self: center;
+  align-self: center;
+  padding: 15px 16px;
+}
+
+
+

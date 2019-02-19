@@ -1,0 +1,24 @@
+.sign-in-grid-container {
+  display: grid;
+  grid-template-areas: "sign-in";
+  height: calc(100vh - 180px);
+}
+
+.sign-in-grid-items {
+  grid-area: sign-in;
+  justify-self: center;
+  align-self: center;
+}
+
+.sign-in-title {
+  font-family: "Roboto-Regular";
+  color: #000000;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.sign-in-button {
+  margin-top: 15px;
+  justify-items: center;
+  display: grid;
+}

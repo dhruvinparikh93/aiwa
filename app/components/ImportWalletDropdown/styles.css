@@ -1,0 +1,198 @@
+.account-settings-import-wallet {
+  align-self: center;
+  grid-area: import-wallet;
+  display: grid;
+  grid-template-areas:
+    'import-wallet-label'
+    'import-wallet-content';
+  padding-left: 20px;
+  cursor: pointer;
+  padding-top: 12px;
+}
+
+.account-settings-import-wallet-label {
+  grid-area: import-wallet-label;
+  margin-bottom: 12px;
+}
+
+.account-settings-import-wallet-content {
+  grid-area: import-wallet-content;
+  display: grid;
+  grid-template-areas:
+    'import-wallet-options import-wallet-button'
+    'import-wallet-filename import-wallet-filename'
+    'import-wallet-input import-wallet-input'
+    'import-padding import-padding';
+  grid-template-columns: fit-content(100%);
+  grid-template-rows: 41px auto auto 20px;
+  padding-left: 27px;
+}
+.account-settings-import-wallet-content-privatekey-padding {
+  grid-template-rows: 45px auto auto 20px;
+}
+
+.account-settings-import-wallet-filename {
+  grid-area: import-wallet-filename;
+  display: grid;
+  align-self: flex-start;
+  overflow: hidden;
+}
+.account-settings-import-wallet-filename-label {
+  font-family: 'Roboto-Medium';
+  font-size: 10px;
+  color: #719db1;
+  margin-left: 5px;
+  margin-right: 3px;
+}
+.account-settings-import-wallet-filename-value {
+  font-family: 'Roboto-Light';
+  font-size: 10px;
+  color: #719db1;
+}
+
+.account-settings-import-wallet-option {
+  grid-area: import-wallet-options;
+  color: #719db1;
+  display: grid;
+  grid-template-areas: 'option-1 option-2';
+  grid-template-columns: max-content max-content;
+
+  border: 1px solid #47849e;
+  width: 180px;
+  justify-content: center;
+  align-content: center;
+  border-radius: 15px;
+  height: 37px;
+  overflow: visible !important;
+  margin-top: 5px;
+}
+
+.account-settings-import-wallet-option-label {
+  background-color: #005074;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-family: 'Roboto-Medium';
+  font-size: 11px;
+  margin-top: -38px;
+  width: max-content;
+}
+.account-settings-import-wallet-option-1 {
+  grid-area: option-1;
+  font-family: 'Roboto-Regular';
+  font-size: 12px;
+  margin-right: 5px;
+}
+.account-settings-import-wallet-option-2 {
+  grid-area: option-2;
+  font-family: 'Roboto-Regular';
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.account-settings-import-wallet-file-name {
+  grid-area: import-wallet-file-name;
+  justify-self: left;
+  align-items: center;
+}
+
+.account-settings-import-wallet-file-name-long-text {
+  font-size: 8px;
+}
+.account-settings-import-wallet-file-name-text {
+  font-size: 10px;
+  color: #719db1;
+  margin-right: 20px;
+}
+
+/* .account-settings-import-wallet-input {
+} */
+
+.account-settings-import-wallet-button {
+  grid-area: import-wallet-button;
+  justify-self: right;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+
+.account-settings-import-padding {
+  grid-area: import-padding;
+}
+
+.account-settings-import-wallet-animated-input {
+  grid-area: import-wallet-input;
+  align-self: flex-start;
+  justify-content: center;
+  position: relative;
+  background-color: transparent;
+  margin-right: 20px;
+  border-color: #648c9e;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  transition: border-color 200ms ease-in-out;
+  margin-top: 5px;
+}
+
+.account-settings-import-wallet-animated-input-error {
+  border-color: #ff0000;
+}
+
+.account-settings-import-wallet-hidden-textarea {
+  background-color: #005074;
+  border: none;
+  resize: none;
+  width: 289px;
+  height: 73px;
+  border-radius: 20px;
+  font-family: 'Roboto-Italic';
+  font-size: 14px;
+  padding: 12px;
+  padding-right: 7px;
+  color: #47849e;
+}
+
+.account-settings-import-wallet-hidden-textarea::placeholder {
+  color: #47849e;
+}
+
+.account-settings-import-wallet-hidden-textarea::-webkit-scrollbar {
+  width: 13px !important;
+  cursor: pointer;
+}
+
+.account-settings-import-wallet-hidden-textarea::-webkit-scrollbar-track {
+  background: transparent !important ;
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+  cursor: pointer;
+}
+
+.account-settings-import-wallet-hidden-textarea::-webkit-scrollbar-thumb {
+  background: #7faabe !important ;
+  border-radius: 25px !important ;
+  background-clip: padding-box !important ;
+  border: 4.5px solid rgba(0, 0, 0, 0) !important ;
+}
+
+.account-settings-import-wallet-hidden-textarea::-webkit-scrollbar-thumb:hover {
+  background: #92c3da !important ;
+  border-radius: 25px !important ;
+  background-clip: padding-box !important ;
+  border: 4.5px solid rgba(0, 0, 0, 0) !important ;
+}
+
+.account-settings-import-wallet-hidden-input {
+  background-color: #005074;
+  border: none;
+  width: 289px;
+  border-radius: 20px;
+  font-family: 'Roboto-Italic';
+  font-size: 14px;
+  padding: 12px;
+  color: #47849e;
+}
+
+.account-settings-import-wallet-hidden-input::placeholder {
+  color: #47849e;
+}

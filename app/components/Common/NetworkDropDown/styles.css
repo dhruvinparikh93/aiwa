@@ -1,0 +1,130 @@
+.network-list-container {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'network';
+  grid-template-rows: repeat(4, 1fr);
+  padding: 10px 20px 0px 20px;
+  height: 180px;
+  width: 100vw;
+}
+
+.network-list-network-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'dot network-name check';
+}
+
+.network-list-dot {
+  grid-area: dot;
+  justify-self: center;
+  align-self: center;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.network-list-dot-selected {
+  border: 1px solid #fff;
+}
+
+.network-list-network-name {
+  grid-area: network-name;
+  justify-self: left;
+  align-self: center;
+  font-family: 'Roboto-Regular';
+  font-family: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.network-dropdown-current-network-name {
+  color: white;
+  display: grid;
+  grid-template-areas: 'name arrow';
+  grid-template-rows: 1fr auto;
+}
+
+.network-dropdown-arrow-container {
+  grid-area: arrow;
+  align-self: center;
+  justify-self: center;
+}
+
+.network-dropdown-arrow {
+  margin-top: 3px;
+  height: 17px;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  cursor: pointer;
+}
+
+.network-dropdown-name {
+  grid-area: name;
+  font-family: 'Roboto-Regular';
+  font-size: 15px;
+  align-self: center;
+  justify-self: center;
+  margin-right: 5px;
+}
+
+.network-list-check {
+  grid-area: check;
+  align-self: center;
+  justify-self: center;
+}
+
+.network-list-network-name-selected {
+  font-family: 'Roboto-Bold';
+}
+
+.dot1 {
+  background-color: #3398c7;
+}
+
+.dot2 {
+  background-color: #9f33c7;
+}
+
+.dot3 {
+  background-color: #c73333;
+}
+
+.dot4 {
+  background-color: #bcc733;
+}
+
+.custom-network-grid-container {
+  overflow: hidden;
+  display: grid;
+  grid-template-areas:
+    'url url'
+    'port-number button';
+  padding-right: 20px;
+  padding-left: 55px;
+  padding-bottom: 5px;
+  height: 115px;
+  justify-items: left;
+  justify-self: left;
+  background: rgb(0, 66, 96);
+  text-align: right !important;
+}
+
+.custom-network-port-number {
+  grid-area: port-number;
+  align-self: center;
+}
+
+.custom-network-url {
+  grid-area: url;
+  align-self: center;
+}
+
+.custom-network-button {
+  grid-area: button;
+  justify-self: right;
+  justify-items: right;
+  align-self: center;
+}

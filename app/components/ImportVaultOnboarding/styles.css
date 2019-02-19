@@ -1,0 +1,66 @@
+.import-vault-onboarding-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows:  40px 60px 70px 60px;
+    grid-template-areas:
+      'title'
+      'file-name'
+      'password'
+      'submit-button';
+    padding: 10px 20px;
+    background-color: white;
+    height: calc(100vh - 180px - 69px);
+  }
+  
+  .import-vault-onboarding-title {
+    grid-area: title;
+    font-family: 'Roboto-Regular';
+    color: #000000;
+    font-size: 17px;
+    justify-self: center;
+    align-self: flex-start;
+    width: 260px; 
+    overflow: hidden;
+    padding-top:15px;  
+  }
+  .import-vault-onboarding-file-name {
+    grid-area: file-name;
+    justify-self: center;
+    align-self: center;
+    width: 260px; 
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .import-vault-onboarding-file-name-long-text {
+    font-size: 12px;
+    min-width: 100px;
+    height:100px;
+  }
+  .import-vault-onboarding-file-name-text {
+    font-size: 14px;
+    min-width: 100px;
+     }
+  .import-vault-onboarding-password {
+    grid-area: password;
+    justify-self: center;
+    align-self: flex-start;
+  }
+  
+ 
+  
+  .import-vault-onboarding-submit-button {
+    grid-area: submit-button;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .import-vault-onboarding-footer-content {
+    text-align: center;
+  }
+  
+  .import-vault-onboarding-footer-content > p {
+    margin: 0;
+    font-family: 'Roboto-Medium';
+    font-size: 15px;
+  }
+  
