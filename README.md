@@ -24,7 +24,6 @@ Get AION test tokens : https://faucets.blockxlabs.com/aion for Mastery and AVM T
 npm install
 npm run dev
 ```
-If you see blank white page, in Chrome go to 'https://localhost:3000/', Click Advanced and Proceed with Unsafe. Then go to chrome://extension -> Aiwa -> Click Reload icon. 
 
 Go to chrome
 
@@ -32,6 +31,8 @@ Go to chrome
 - Right corner enable `Developer mode`
 - Click `Load Unpacked`
 - Open `aiwa/dev/chrome` folder
+
+If you see blank white page after waiting, in Chrome go to 'https://localhost:3000/', Click Advanced and Proceed with Unsafe. Then go to chrome://extension -> Aiwa -> Click Reload icon.
 
 ### Firefox
 `npm run dev-firefox`
