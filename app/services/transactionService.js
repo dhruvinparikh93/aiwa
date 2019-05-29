@@ -14,8 +14,8 @@ import {
 import NRG_MULTIPLIER from '../constants/nrg';
 import { convertNanoAmpToAion, convertNanoAmpToAmp, convertValueToUSD } from './numberFormatter';
 
-function verifyERC777Token(erc777token) {
-  if (erc777token.symbol !== '' && erc777token.name !== '') {
+function verifyERC777Token(erc777token, { to }) {
+  if (to && erc777token.symbol !== '' && erc777token.name !== '') {
     return true;
   }
   return false;
@@ -80,7 +80,7 @@ export async function createTransactionObj(tx) {
   if (selectedToken.name === 'Aion') {
     erc777token = fetchTokenData(modifiedTo, networkFullUrl);
     erc777params = decodeERC777MethodData(validatedHexData);
-    isERC777 = verifyERC777Token(erc777token);
+    isERC777 = verifyERC777Token(erc777token, erc777params);
     //modify the value if ERC777 parsed
     if (isERC777) {
       isTokenSaved = isTokenFound(tokenList[currentWallet.address][networkValue], erc777token);
