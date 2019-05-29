@@ -544,7 +544,7 @@ export function signTransaction(transactionDetails) {
         to: transaction.to,
         amount: transaction.amount.toString(),
         hexData: transaction.data,
-        gasPrice: new BigNumber(transaction.gasPrice, 1),
+        gasPrice: new BigNumber(transaction.gasPrice),
         gas: transaction.gasLimit,
       };
 
